@@ -81,9 +81,9 @@
 		C3BFD9B829E70D8D00EEA048 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C3BFD9B229E70B1300EEA048 /* Info.plist */,
 				C3BFD9A429E70B1200EEA048 /* AppDelegate.swift */,
 				C3BFD9A629E70B1200EEA048 /* SceneDelegate.swift */,
+				C3BFD9B229E70B1300EEA048 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
