@@ -6,3 +6,62 @@
 //
 
 import Foundation
+
+final class DataStore {
+    static var share = DataStore()
+    private init() {}
+}
+
+extension DataStore {
+    private func gerPerson() -> Person {
+        Person(secrets:
+                [
+                    Secret(
+                        title: "Delegate",
+                        image: [""],
+                        matherials: [""],
+                        questions: [
+                            Question(
+                                title: "",
+                                answers: [""],
+                                best: 0
+                            ),
+                            Question(
+                                title: "",
+                                answers: [""],
+                                best: 0
+                            ),
+                            Question(
+                                title: "",
+                                answers: [""],
+                                best: 0
+                            )
+                        ]
+                    ),
+                    Secret(
+                        title: "CoreData",
+                        image: [""],
+                        matherials: [""],
+                        questions: [
+                            Question(
+                                title: "",
+                                answers: [""],
+                                best: 0
+                            ),
+                            Question(
+                                title: "",
+                                answers: [""],
+                                best: 0
+                            ),
+                            Question(
+                                title: "",
+                                answers: [""],
+                                best: 0
+                            )
+                        ]
+                    )
+                    
+                ]
+        )
+    }
+}
