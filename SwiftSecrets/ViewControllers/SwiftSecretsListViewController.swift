@@ -9,7 +9,7 @@ import UIKit
 
 class SwiftSecretsTableViewController: UITableViewController {
     
-    let secrets = DataStore.share.gerPerson().secrets // was created issue to name fix gerPerson to getPerson
+    let secrets = DataStore.share.getPerson().secrets
     
     var currentSecret: Secret?
 
@@ -44,7 +44,7 @@ class SwiftSecretsTableViewController: UITableViewController {
         guard let firstVC = tabBar.viewControllers?.first else { return }
         guard let mathirialsVC = firstVC as? MatherialsViewController else { return }
         
-       // mathirialsVC.currentSecret = currentSecret
+        mathirialsVC.currentSecret = currentSecret
     }
     
 
