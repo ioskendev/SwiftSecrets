@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MatherialsViewController: UIViewController {
+final class MatherialsViewController: UIViewController {
+    
+    var currentSecret: Secret!
 
     override func viewDidLoad() {
         super.viewDidLoad()
