@@ -41,7 +41,7 @@ class SwiftSecretsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let currentSecret = currentSecret else { return }
+        //guard let currentSecret = currentSecret else { return } // uncomment when mathirialsVC is ready
         
         guard let tabBar = segue.destination as? UITabBarController else { return }
         
