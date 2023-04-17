@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SwiftSecretsTableViewController: UITableViewController {
+final class SwiftSecretsTableViewController: UITableViewController {
     
     let secrets = DataStore.share.getSecrets()
     
