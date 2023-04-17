@@ -13,7 +13,7 @@ final class DataStore {
 }
 
 extension DataStore {
-    func gerPerson() -> Person {
+    func getPerson() -> Person {
         Person(secrets:
                 [
                     Secret(
