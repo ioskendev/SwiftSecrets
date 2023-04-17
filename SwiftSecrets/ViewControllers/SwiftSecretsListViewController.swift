@@ -14,6 +14,10 @@ class SwiftSecretsTableViewController: UITableViewController {
     var currentSecret: Secret?
 
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return secrets.count
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secret", for: indexPath)
@@ -36,11 +40,16 @@ class SwiftSecretsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBar = segue.destination as? UITabBarController else { return }
-        guard let firstVC = tabBar.viewControllers?.first else { return }
-        guard let mathirialsVC = firstVC as? MatherialsViewController else { return }
         
-        mathirialsVC.currentSecret = currentSecret
+        guard let currentSecret = currentSecret else { return }
+        
+        guard let tabBar = segue.destination as? UITabBarController else { return }
+        
+        if let mathirialsVC = tabBar.viewControllers?.first as? MatherialsViewController {
+        //    mathirialsVC.currentSecret = currentSecret
+        } else if let questionsMathirialsVC = tabBar.viewControllers?.last as? QuestionsViewController {
+        //    questionsVC.currentSecret = currentSecret
+        }
     }
     
 }
