@@ -9,7 +9,7 @@ import UIKit
 
 class SwiftSecretsTableViewController: UITableViewController {
     
-    let secrets = DataStore.share.getPerson().secrets
+    let secrets = DataStore.share.getSecrets()
     
     var currentSecret: Secret?
 
