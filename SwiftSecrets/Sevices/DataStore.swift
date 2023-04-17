@@ -13,55 +13,54 @@ final class DataStore {
 }
 
 extension DataStore {
-    func getPerson() -> Person {
-        Person(secrets:
-                [
-                    Secret(
-                        title: "Delegate",
-                        image: [""],
-                        matherials: [""],
-                        questions: [
-                            Question(
-                                title: "",
-                                answers: [""],
-                                best: 0
-                            ),
-                            Question(
-                                title: "",
-                                answers: [""],
-                                best: 0
-                            ),
-                            Question(
-                                title: "",
-                                answers: [""],
-                                best: 0
-                            )
-                        ]
+    func getSecrets() -> [Secret] {
+        [
+            Secret(
+                title: "Delegate",
+                image: [""],
+                matherials: [""],
+                questions: [
+                    Question(
+                        title: "",
+                        answers: [""],
+                        best: 0
                     ),
-                    Secret(
-                        title: "CoreData",
-                        image: [""],
-                        matherials: [""],
-                        questions: [
-                            Question(
-                                title: "",
-                                answers: [""],
-                                best: 0
-                            ),
-                            Question(
-                                title: "",
-                                answers: [""],
-                                best: 0
-                            ),
-                            Question(
-                                title: "",
-                                answers: [""],
-                                best: 0
-                            )
-                        ]
+                    Question(
+                        title: "",
+                        answers: [""],
+                        best: 0
+                    ),
+                    Question(
+                        title: "",
+                        answers: [""],
+                        best: 0
                     )
-                    
                 ]
-        )
+            ),
+            Secret(
+                title: "CoreData",
+                image: [""],
+                matherials: [""],
+                questions: [
+                    Question(
+                        title: "",
+                        answers: [""],
+                        best: 0
+                    ),
+                    Question(
+                        title: "",
+                        answers: [""],
+                        best: 0
+                    ),
+                    Question(
+                        title: "",
+                        answers: [""],
+                        best: 0
+                    )
+                ]
+            )
+            
+        ]
+        
     }
 }

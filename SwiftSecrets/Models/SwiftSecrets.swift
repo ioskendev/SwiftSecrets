@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct Person {
-    let name = "Guest"
-    var secrets: [Secret]
-}
-
 struct Secret {
     let title: String
     let image: [String]
