@@ -13,10 +13,6 @@ class SwiftSecretsTableViewController: UITableViewController {
     
     var currentSecret: Secret?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,5 +43,4 @@ class SwiftSecretsTableViewController: UITableViewController {
         mathirialsVC.currentSecret = currentSecret
     }
     
-
 }
