@@ -17,7 +17,7 @@ extension DataStore {
         [
             Secret(
                 title: "Delegate",
-                image: [""],
+                image: ["Delegate"],
                 matherials: [
     """
     Паттерн - шаблон который используется для реализации конкретных действий
@@ -49,17 +49,17 @@ extension DataStore {
                 questions: [
                     Question(
                         title: "Определите объект-делегат, если FirstScreenViewController: SecondViewControllerDelegate",
-                        answers: ["FirstScreenViewController", "SecondViewControllerDelegate", "Оба", "Объектов-делегатов не существует?"],
+                        answers: ["FirstScreenViewController", "SecondViewControllerDelegate", "Оба", "Объектов-делегатов не существует"],
                         best: 0
                     ),
                     Question(
-                        title: "Где как правило описывается(хранится) протокол, оканчивающийся на Delegate?",
+                        title: "Где, как правило, описывается(хранится) протокол, оканчивающийся на Delegate?",
                         answers: ["В отдельном файле с протоколами", "В файле объекта-делегата(так удобнее)", "В файле руководящего объекта", "В документации XCode"],
                         best: 2
                     ),
                     Question(
                         title: "Что мы передаём в качестве исполнителя?",
-                        answers: ["Объект-делегат", "Объект исполнитель", "Себя", "Ничего, так как протокол оканчивающийся на Delegate работает во всём приложении вне завимости от мета где объявлен"],
+                        answers: ["Объект-делегат", "Объект исполнитель", "Себя", "Ничего, так как протокол, оканчивающийся на Delegate, работает во всём приложении вне завимости от меcта где объявлен"],
                         best: 0
                     )
                 ]
