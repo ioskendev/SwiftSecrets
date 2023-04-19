@@ -9,12 +9,16 @@ import UIKit
 
 final class MatherialsViewController: UIViewController {
     
+    @IBOutlet var matherialImage: UIImageView!
+    @IBOutlet var matherialLabel: UILabel!
+    
     var currentSecret: Secret!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        matherialImage.image = UIImage(named: currentSecret.image[0])
+        matherialLabel.text = currentSecret.matherials[0]
     }
     
 
