@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D6DEB0529F197570043ED6B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6DEB0429F197570043ED6B /* TabBarController.swift */; };
 		C3BFD9A529E70B1200EEA048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9A429E70B1200EEA048 /* AppDelegate.swift */; };
 		C3BFD9A729E70B1200EEA048 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9A629E70B1200EEA048 /* SceneDelegate.swift */; };
 		C3BFD9AC29E70B1200EEA048 /* SwiftSecretsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BFD9AA29E70B1200EEA048 /* SwiftSecretsStoryboard.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D6DEB0429F197570043ED6B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C3BFD9A129E70B1200EEA048 /* SwiftSecrets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSecrets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BFD9A429E70B1200EEA048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3BFD9A629E70B1200EEA048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				C3BFD9C629E7114900EEA048 /* SwiftSecretsListViewController.swift */,
+				4D6DEB0429F197570043ED6B /* TabBarController.swift */,
 				C3BFD9C829E711AD00EEA048 /* MatherialsViewController.swift */,
 				C3BFD9CA29E711E100EEA048 /* QuestionsViewController.swift */,
 			);
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3BFD9C729E7114900EEA048 /* SwiftSecretsListViewController.swift in Sources */,
+				4D6DEB0529F197570043ED6B /* TabBarController.swift in Sources */,
 				C3BFD9CB29E711E100EEA048 /* QuestionsViewController.swift in Sources */,
 				C3BFD9BD29E70F4100EEA048 /* SwiftSecrets.swift in Sources */,
 				C3BFD9C929E711AD00EEA048 /* MatherialsViewController.swift in Sources */,

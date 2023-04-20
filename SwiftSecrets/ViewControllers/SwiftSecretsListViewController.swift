@@ -30,13 +30,9 @@ final class SwiftSecretsTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        guard let tabBar = segue.destination as? UITabBarController else { return }
+        guard let tabBar = segue.destination as? TabBarController else { return }
         
-        if let mathirialsVC = tabBar.viewControllers?.first as? MatherialsViewController {
-            mathirialsVC.secret = secrets[indexPath.row]
-        } else if let questionsVC = tabBar.viewControllers?.last as? QuestionsViewController {
-            questionsVC.secret = secrets[indexPath.row]
-        }
+        tabBar.secret = secrets[indexPath.row]
     }
     
 }
