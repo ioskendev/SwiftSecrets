@@ -7,17 +7,19 @@
 
 import UIKit
 
-class QuestionsViewController: UIViewController {
+final class QuestionsViewController: UIViewController {
     
     @IBOutlet var answerButtons: [UIButton]!
     
     @IBOutlet var questionButton: UIButton!
     
+    @IBOutlet var buttonsStack: UIStackView!
+    
     var secret: Secret!
     
-    var questionIndex = 0
+    private var questionIndex = 0
     
-    var question: Question {
+    private var question: Question {
         secret.questions[questionIndex]
     }
     
@@ -30,23 +32,26 @@ class QuestionsViewController: UIViewController {
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        guard questionIndex < secret.questions.count else { return }
-        
         if sender.tag == question.best {
             secret.result += 1
         }
         
         questionIndex += 1
         
-        showQuestion()
+        if  (0..<secret.questions.count).contains(questionIndex) {
+            showQuestion()
+        } else {
+            buttonsStack.isHidden = true
+            questionButton.setTitle("Количество верных ответов \(secret.result) из 3", for: .normal)
+        }
     }
     
-    func showQuestion() {
+    private func showQuestion() {
         questionButton.setTitle(question.title, for: .normal)
         
         for (button, answer) in zip(answerButtons, question.answers) {
             button.setTitle(answer, for: .normal)
         }
     }
-   
+    
 }

@@ -84,6 +84,7 @@
                     <tabBarItem key="tabBarItem" title="Item" image="paperplane.fill" catalog="system" id="Zyd-aM-Pui"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonsStack" destination="AZn-vz-cvZ" id="Ybn-rO-X13"/>
                         <outlet property="questionButton" destination="onM-wG-iAU" id="fce-ex-VGG"/>
                         <outletCollection property="answerButtons" destination="G9H-QL-D6t" collectionClass="NSMutableArray" id="PVw-nH-Ius"/>
                         <outletCollection property="answerButtons" destination="AGn-DO-LsP" collectionClass="NSMutableArray" id="AFN-M5-dZI"/>
