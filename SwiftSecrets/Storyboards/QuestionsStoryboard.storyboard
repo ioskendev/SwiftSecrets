@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="QuestionsViewController" customModule="SwiftSecrets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,24 +33,36 @@
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="firstAnswer"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eNk-pp-BZV"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-DO-LsP">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-DO-LsP">
                                                 <rect key="frame" x="0.0" y="78.5" width="288" height="68.5"/>
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="secondAnswer"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eH8-tE-Kcb"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-cJ-WyR">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-cJ-WyR">
                                                 <rect key="frame" x="0.0" y="157" width="288" height="69"/>
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="thirdAnswer"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Gb8-sO-uyz"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-ZF-wzK">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-ZF-wzK">
                                                 <rect key="frame" x="0.0" y="236" width="288" height="68.5"/>
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="fourthAnswer"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="J7y-le-aYt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -71,6 +83,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="paperplane.fill" catalog="system" id="Zyd-aM-Pui"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="questionButton" destination="onM-wG-iAU" id="fce-ex-VGG"/>
+                        <outletCollection property="answerButtons" destination="G9H-QL-D6t" collectionClass="NSMutableArray" id="PVw-nH-Ius"/>
+                        <outletCollection property="answerButtons" destination="AGn-DO-LsP" collectionClass="NSMutableArray" id="AFN-M5-dZI"/>
+                        <outletCollection property="answerButtons" destination="JyY-cJ-WyR" collectionClass="NSMutableArray" id="zDe-Xq-kzd"/>
+                        <outletCollection property="answerButtons" destination="HZu-ZF-wzK" collectionClass="NSMutableArray" id="JaI-ma-hro"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
