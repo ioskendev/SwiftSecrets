@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Exam-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="QuestionsViewController" customModule="SwiftSecrets" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Ty-W3-dFg" secondAttribute="trailing" constant="16" id="tuQ-6y-8jF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="paperplane.fill" catalog="system" id="Zyd-aM-Pui"/>
+                    <tabBarItem key="tabBarItem" title="Exam" image="circle.hexagongrid" catalog="system" id="Zyd-aM-Pui"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonsStack" destination="AZn-vz-cvZ" id="Ybn-rO-X13"/>
@@ -98,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <image name="circle.hexagongrid" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
