@@ -91,7 +91,7 @@
         <!--Secret-->
         <scene sceneID="5cP-2u-clp">
             <objects>
-                <tabBarController title="Secret" automaticallyAdjustsScrollViewInsets="NO" id="ue6-TV-AzI" sceneMemberID="viewController">
+                <tabBarController title="Secret" automaticallyAdjustsScrollViewInsets="NO" id="ue6-TV-AzI" customClass="TabBarController" customModule="SwiftSecrets" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o7D-9r-jJB">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
