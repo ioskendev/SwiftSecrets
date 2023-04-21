@@ -19,12 +19,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Ty-W3-dFg">
                                 <rect key="frame" x="16" y="36" width="288" height="467"/>
                                 <subviews>
-                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onM-wG-iAU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-zg-3e0">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="152.5"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="question"/>
-                                    </button>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AZn-vz-cvZ">
                                         <rect key="frame" x="0.0" y="162.5" width="288" height="304.5"/>
                                         <subviews>
@@ -68,7 +68,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="onM-wG-iAU" firstAttribute="height" secondItem="AZn-vz-cvZ" secondAttribute="height" multiplier="0.5" id="Wi2-Ld-zen"/>
+                                    <constraint firstItem="PRq-zg-3e0" firstAttribute="height" secondItem="AZn-vz-cvZ" secondAttribute="height" multiplier="0.5" id="gv9-8H-0cp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -85,7 +85,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonsStack" destination="AZn-vz-cvZ" id="Ybn-rO-X13"/>
-                        <outlet property="questionButton" destination="onM-wG-iAU" id="fce-ex-VGG"/>
+                        <outlet property="questionLabel" destination="PRq-zg-3e0" id="bDX-fX-YYO"/>
                         <outletCollection property="answerButtons" destination="G9H-QL-D6t" collectionClass="NSMutableArray" id="PVw-nH-Ius"/>
                         <outletCollection property="answerButtons" destination="AGn-DO-LsP" collectionClass="NSMutableArray" id="AFN-M5-dZI"/>
                         <outletCollection property="answerButtons" destination="JyY-cJ-WyR" collectionClass="NSMutableArray" id="zDe-Xq-kzd"/>

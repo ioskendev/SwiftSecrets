@@ -11,7 +11,7 @@ final class QuestionsViewController: UIViewController {
     
     @IBOutlet var answerButtons: [UIButton]!
     
-    @IBOutlet var questionButton: UIButton!
+    @IBOutlet var questionLabel: UILabel!
     
     @IBOutlet var buttonsStack: UIStackView!
     
@@ -42,12 +42,12 @@ final class QuestionsViewController: UIViewController {
             showQuestion()
         } else {
             buttonsStack.isHidden = true
-            questionButton.setTitle("Количество верных ответов \(secret.result) из 3", for: .normal)
+            questionLabel.text = "Количество правильных ответов \(secret.result) из 3"
         }
     }
     
     private func showQuestion() {
-        questionButton.setTitle(question.title, for: .normal)
+        questionLabel.text = question.title
         
         for (button, answer) in zip(answerButtons, question.answers) {
             button.setTitle(answer, for: .normal)
