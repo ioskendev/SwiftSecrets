@@ -10,19 +10,22 @@
         <!--Developers-->
         <scene sceneID="VzX-9g-5l4">
             <objects>
-                <tableViewController id="tp7-4b-RfO" sceneMemberID="viewController">
+                <tableViewController id="tp7-4b-RfO" customClass="AboutListViewController" customModule="SwiftSecrets" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nz3-7e-xbY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hph-1C-gTd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="developer" id="hph-1C-gTd">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hph-1C-gTd" id="KXG-Dw-MO1">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SO6-mG-TQq" kind="show" id="u8r-ki-oxJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,6 +38,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3G-ca-JtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="41"/>
+        </scene>
+        <!--DevelopersStoryboard-->
+        <scene sceneID="dBh-4b-zhe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DevelopersStoryboard" id="SO6-mG-TQq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xf6-L4-xDn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXJ-HZ-z9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lhl-aP-DrA">
