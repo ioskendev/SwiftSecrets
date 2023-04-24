@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D6DEB0529F197570043ED6B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6DEB0429F197570043ED6B /* TabBarController.swift */; };
+		4D6DEB0829F6F8AA0043ED6B /* Extension + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6DEB0729F6F8AA0043ED6B /* Extension + UITableViewCell.swift */; };
 		C3BFD9A529E70B1200EEA048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9A429E70B1200EEA048 /* AppDelegate.swift */; };
 		C3BFD9A729E70B1200EEA048 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9A629E70B1200EEA048 /* SceneDelegate.swift */; };
 		C3BFD9AC29E70B1200EEA048 /* SwiftSecretsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3BFD9AA29E70B1200EEA048 /* SwiftSecretsStoryboard.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		4D6DEB0429F197570043ED6B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4D6DEB0729F6F8AA0043ED6B /* Extension + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITableViewCell.swift"; sourceTree = "<group>"; };
 		C3BFD9A129E70B1200EEA048 /* SwiftSecrets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSecrets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BFD9A429E70B1200EEA048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3BFD9A629E70B1200EEA048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D6DEB0629F6F85F0043ED6B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4D6DEB0729F6F8AA0043ED6B /* Extension + UITableViewCell.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C3BFD99829E70B1200EEA048 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 			children = (
 				C3BFD9B929E70E0400EEA048 /* Storyboards */,
 				C3BFD9BA29E70E1E00EEA048 /* ViewControllers */,
+				4D6DEB0629F6F85F0043ED6B /* Extension */,
 				C3BFD9BE29E70F5100EEA048 /* Models */,
 				C3BFD9B829E70D8D00EEA048 /* App */,
 				C3BFD9BB29E70E3900EEA048 /* Resources */,
@@ -223,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6DEB0829F6F8AA0043ED6B /* Extension + UITableViewCell.swift in Sources */,
 				C3BFD9C729E7114900EEA048 /* SwiftSecretsListViewController.swift in Sources */,
 				4D6DEB0529F197570043ED6B /* TabBarController.swift in Sources */,
 				C3BFD9CB29E711E100EEA048 /* QuestionsViewController.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 final class SwiftSecretsTableViewController: UITableViewController {
     
-    private let secrets = DataStore.share.getSecrets()
+    private var secrets = DataStore.share.getSecrets()
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,9 +20,7 @@ final class SwiftSecretsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secret", for: indexPath)
         let secret = secrets[indexPath.row]
         
-        var configuration = cell.defaultContentConfiguration()
-        configuration.text = secret.title
-        cell.contentConfiguration = configuration
+        cell.configure(with: secret)
 
         return cell
     }
@@ -33,6 +31,17 @@ final class SwiftSecretsTableViewController: UITableViewController {
         guard let tabBar = segue.destination as? TabBarController else { return }
         
         tabBar.secret = secrets[indexPath.row]
+    }
+    
+    
+    @IBAction func sortingSecrets(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            secrets = secrets.sorted { $0.title < $1.title }
+        } else {
+            secrets = secrets.sorted { $0.result < $1.result
+            }
+        }
+        tableView.reloadData()
     }
     
 }
