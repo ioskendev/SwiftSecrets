@@ -7,21 +7,14 @@
 
 import UIKit
 
-class AboutListViewController: UITableViewController {
+final class DevelopersListViewController: UITableViewController {
     
-    let authors = ["Yuri Volegov", "Elena Loginova"]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    private let authors = ["Yuri Volegov", "Elena Loginova"]
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return authors.count
+        authors.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "developer", for: indexPath)
@@ -29,10 +22,7 @@ class AboutListViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         
         content.text = authors[indexPath.row]
-        
         content.image = UIImage(named: authors[indexPath.row])
-        
-        
         
         cell.contentConfiguration = content
 
@@ -45,6 +35,11 @@ class AboutListViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        guard let developersVC = segue.destination as? DevelopersViewController else { return }
+        
+        developersVC.developerName = authors[indexPath.row]
     }
 
 }

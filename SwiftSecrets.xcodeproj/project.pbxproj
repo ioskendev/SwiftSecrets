@@ -20,8 +20,8 @@
 		C3BFD9C729E7114900EEA048 /* SwiftSecretsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9C629E7114900EEA048 /* SwiftSecretsListViewController.swift */; };
 		C3BFD9C929E711AD00EEA048 /* MatherialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9C829E711AD00EEA048 /* MatherialsViewController.swift */; };
 		C3BFD9CB29E711E100EEA048 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BFD9CA29E711E100EEA048 /* QuestionsViewController.swift */; };
-		C3E1380D29F5552900D333D5 /* AboutStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E1380C29F5552900D333D5 /* AboutStoryboard.storyboard */; };
-		C3E1380F29F5555900D333D5 /* AboutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1380E29F5555900D333D5 /* AboutListViewController.swift */; };
+		C3E1380D29F5552900D333D5 /* DevelopersListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E1380C29F5552900D333D5 /* DevelopersListStoryboard.storyboard */; };
+		C3E1380F29F5555900D333D5 /* DevelopersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1380E29F5555900D333D5 /* DevelopersListViewController.swift */; };
 		C3E1381129F5639E00D333D5 /* DevelopersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E1381029F5639E00D333D5 /* DevelopersStoryboard.storyboard */; };
 		C3E1381329F5841A00D333D5 /* DevelopersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1381229F5841A00D333D5 /* DevelopersViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,8 +42,8 @@
 		C3BFD9C629E7114900EEA048 /* SwiftSecretsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSecretsListViewController.swift; sourceTree = "<group>"; };
 		C3BFD9C829E711AD00EEA048 /* MatherialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatherialsViewController.swift; sourceTree = "<group>"; };
 		C3BFD9CA29E711E100EEA048 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
-		C3E1380C29F5552900D333D5 /* AboutStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutStoryboard.storyboard; sourceTree = "<group>"; };
-		C3E1380E29F5555900D333D5 /* AboutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutListViewController.swift; sourceTree = "<group>"; };
+		C3E1380C29F5552900D333D5 /* DevelopersListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevelopersListStoryboard.storyboard; sourceTree = "<group>"; };
+		C3E1380E29F5555900D333D5 /* DevelopersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersListViewController.swift; sourceTree = "<group>"; };
 		C3E1381029F5639E00D333D5 /* DevelopersStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevelopersStoryboard.storyboard; sourceTree = "<group>"; };
 		C3E1381229F5841A00D333D5 /* DevelopersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +104,7 @@
 				C3BFD9AA29E70B1200EEA048 /* SwiftSecretsStoryboard.storyboard */,
 				C3BFD9C229E710A400EEA048 /* MatherialsStoryboard.storyboard */,
 				C3BFD9C429E710F700EEA048 /* QuestionsStoryboard.storyboard */,
-				C3E1380C29F5552900D333D5 /* AboutStoryboard.storyboard */,
+				C3E1380C29F5552900D333D5 /* DevelopersListStoryboard.storyboard */,
 				C3E1381029F5639E00D333D5 /* DevelopersStoryboard.storyboard */,
 				C3BFD9AF29E70B1300EEA048 /* LaunchScreen.storyboard */,
 			);
@@ -118,7 +118,7 @@
 				4D6DEB0429F197570043ED6B /* TabBarController.swift */,
 				C3BFD9C829E711AD00EEA048 /* MatherialsViewController.swift */,
 				C3BFD9CA29E711E100EEA048 /* QuestionsViewController.swift */,
-				C3E1380E29F5555900D333D5 /* AboutListViewController.swift */,
+				C3E1380E29F5555900D333D5 /* DevelopersListViewController.swift */,
 				C3E1381229F5841A00D333D5 /* DevelopersViewController.swift */,
 			);
 			path = ViewControllers;
@@ -210,7 +210,7 @@
 				C3E1381129F5639E00D333D5 /* DevelopersStoryboard.storyboard in Resources */,
 				C3BFD9C329E710A400EEA048 /* MatherialsStoryboard.storyboard in Resources */,
 				C3BFD9C529E710F700EEA048 /* QuestionsStoryboard.storyboard in Resources */,
-				C3E1380D29F5552900D333D5 /* AboutStoryboard.storyboard in Resources */,
+				C3E1380D29F5552900D333D5 /* DevelopersListStoryboard.storyboard in Resources */,
 				C3BFD9AE29E70B1300EEA048 /* Assets.xcassets in Resources */,
 				C3BFD9AC29E70B1200EEA048 /* SwiftSecretsStoryboard.storyboard in Resources */,
 			);
@@ -228,7 +228,7 @@
 				C3BFD9CB29E711E100EEA048 /* QuestionsViewController.swift in Sources */,
 				C3BFD9BD29E70F4100EEA048 /* SwiftSecrets.swift in Sources */,
 				C3BFD9C929E711AD00EEA048 /* MatherialsViewController.swift in Sources */,
-				C3E1380F29F5555900D333D5 /* AboutListViewController.swift in Sources */,
+				C3E1380F29F5555900D333D5 /* DevelopersListViewController.swift in Sources */,
 				C3BFD9A529E70B1200EEA048 /* AppDelegate.swift in Sources */,
 				C3BFD9C029E70F9E00EEA048 /* DataStore.swift in Sources */,
 				C3BFD9A729E70B1200EEA048 /* SceneDelegate.swift in Sources */,

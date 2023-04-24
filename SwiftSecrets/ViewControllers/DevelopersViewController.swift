@@ -7,21 +7,19 @@
 
 import UIKit
 
-class DevelopersViewController: UIViewController {
+final class DevelopersViewController: UIViewController {
 
+    @IBOutlet var photoImageView: UIImageView!
+    
+    @IBOutlet var aboutLabel: UILabel!
+    
+    var developerName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoImageView.image = UIImage(named: developerName)
+        aboutLabel.text = developerName
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
