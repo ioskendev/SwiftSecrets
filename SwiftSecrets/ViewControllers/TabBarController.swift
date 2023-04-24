@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
     
     var secret: Secret!
 
@@ -18,7 +18,6 @@ class TabBarController: UITabBarController {
     
 
     private func setupViewControllers() {
-        
         title = secret.title
         
         if let matherialsVC = viewControllers?.first as? MatherialsViewController {
