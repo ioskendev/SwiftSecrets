@@ -13,6 +13,9 @@ final class DevelopersCollectionViewController: UICollectionViewController {
     
     private let developers = ["Yuri Volegov", "Elena Loginova"]
     
+    private lazy var screenWidth = UIScreen.main.bounds.width
+    private lazy var itemSize = (screenWidth / 2) - 24
+    
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         developers.count
@@ -26,7 +29,7 @@ final class DevelopersCollectionViewController: UICollectionViewController {
         
         cell.developerImageView.image = UIImage(named: developers[indexPath.row])
         cell.developerLabel.text = developers[indexPath.row]
-        cell.developerImageView.layer.cornerRadius = 10
+        cell.developerImageView.layer.cornerRadius = itemSize / 10
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = .zero
@@ -40,9 +43,7 @@ final class DevelopersCollectionViewController: UICollectionViewController {
 extension DevelopersCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenWidth = UIScreen.main.bounds.width
-        let itemSize = (screenWidth / 2) - 22
-        
+
         return CGSize(width: itemSize, height: itemSize)
     }
     
