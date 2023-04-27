@@ -10,6 +10,12 @@ import UIKit
 final class SwiftSecretsTableViewController: UITableViewController {
     
     private var secrets = DataStore.share.getSecrets()
+    private var index: Int!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,8 +35,13 @@ final class SwiftSecretsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         guard let tabBar = segue.destination as? TabBarController else { return }
+        index = indexPath.row
         
         tabBar.secret = secrets[indexPath.row]
+        
+        if let questionsVC = tabBar.viewControllers?.last as? QuestionsViewController {
+            questionsVC.delegate = self
+        }
     }
     
     
@@ -45,3 +56,12 @@ final class SwiftSecretsTableViewController: UITableViewController {
     }
     
 }
+
+extension SwiftSecretsTableViewController: QuestionsViewControllerDelegate {
+    
+    func resultUpdate(result: Int) {
+        secrets[index].result = result
+    }
+    
+}
+

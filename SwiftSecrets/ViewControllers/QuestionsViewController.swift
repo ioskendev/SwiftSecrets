@@ -7,16 +7,20 @@
 
 import UIKit
 
+protocol QuestionsViewControllerDelegate {
+    func resultUpdate(result: Int)
+}
+
 final class QuestionsViewController: UIViewController {
     
     @IBOutlet var answerButtons: [UIButton]!
-    
     @IBOutlet var questionLabel: UILabel!
-    
     @IBOutlet var buttonsStack: UIStackView!
     
     var secret: Secret!
+    var delegate: QuestionsViewControllerDelegate!
     
+    private var currentResult = 0
     private var questionIndex = 0
     
     private var question: Question {
@@ -25,15 +29,12 @@ final class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        secret.result = 0
-        
         showQuestion()
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         if sender.tag == question.best {
-            secret.result += 1
+            currentResult += 1
         }
         
         questionIndex += 1
@@ -42,7 +43,11 @@ final class QuestionsViewController: UIViewController {
             showQuestion()
         } else {
             buttonsStack.isHidden = true
-            questionLabel.text = "Количество правильных ответов \(secret.result) из 3"
+            questionLabel.text = "Количество правильных ответов \(currentResult) из \(secret.questions.count)"
+            
+            if currentResult > secret.result {
+                delegate.resultUpdate(result: currentResult)
+            }
         }
     }
     
