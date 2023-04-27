@@ -41,7 +41,7 @@ extension DevelopersCollectionViewController : UICollectionViewDelegateFlowLayou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
-        let itemSize = (screenWidth / 2) - 10
+        let itemSize = (screenWidth / 2) - 22
         
         return CGSize(width: itemSize, height: itemSize)
     }
