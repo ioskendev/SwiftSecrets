@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DevelopersCell: UICollectionViewCell {
+final class DevelopersCell: UICollectionViewCell {
     
     @IBOutlet weak var developerImageView: UIImageView!
     @IBOutlet weak var developerLabel: UILabel!

@@ -10,10 +10,9 @@ import UIKit
 extension UITableViewCell {
     
     func configure( with secret: Secret) {
-        
         var content = defaultContentConfiguration()
-        
         content.text = secret.title
+        
         if secret.result == 3 {
             content.secondaryText = nil
             accessoryType = .checkmark
@@ -21,6 +20,7 @@ extension UITableViewCell {
             content.secondaryText = nil
             accessoryType = .none
         }
+        
         contentConfiguration = content
     }
     

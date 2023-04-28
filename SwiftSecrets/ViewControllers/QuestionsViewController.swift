@@ -13,10 +13,12 @@ protocol QuestionsViewControllerDelegate {
 
 final class QuestionsViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet var answerButtons: [UIButton]!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var buttonsStack: UIStackView!
     
+    // MARK: - Properties
     var secret: Secret!
     var delegate: QuestionsViewControllerDelegate!
     
@@ -27,11 +29,13 @@ final class QuestionsViewController: UIViewController {
         secret.questions[questionIndex]
     }
     
+    // MARK: - Life cycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
         showQuestion()
     }
     
+    // MARK: - IBActions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         if sender.tag == question.best {
             currentResult += 1
@@ -50,6 +54,10 @@ final class QuestionsViewController: UIViewController {
             }
         }
     }
+    
+}
+
+extension QuestionsViewController {
     
     private func showQuestion() {
         questionLabel.text = question.title
