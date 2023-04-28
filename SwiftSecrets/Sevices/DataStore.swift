@@ -9,7 +9,8 @@ import Foundation
 
 final class DataStore {
     
-    static var share = DataStore()
+    static let share = DataStore()
+    
     private init() {}
     
 }
@@ -21,8 +22,8 @@ extension DataStore {
             
             Secret(
                 title: "CoreData",
-                image: ["CoreData"],
-                matherials: [
+                image: "CoreData",
+                matherial:
     """
     Для создания хранилища в приложении используются классы NSPersistentStoreCoordinator или NSPersistentContainer. NSPersistentStoreCoordinator создает хранилище указанного типа на основе модели, можно указать размещение и дополнительные опции. NSPersistentContainer можно использовать с IOS10, дает возможность создания с минимальным количеством кода.
     
@@ -41,7 +42,7 @@ extension DataStore {
     
     Недопонимание этого простого факта, приводит к использованию одноконтекстной модели, даже в тех ситуациях, где ее недостаточно. К примеру, вы редактируете большой документ, и при этом вам потребовалось загрузить пару справочников. В какой момент вызывать save? Если бы мы работали с реляционной базой, то тут бы не возникло вопросов, поскольку каждая операция выполнялась бы в своей транзакции. В Core Data тоже есть вполне удобный способ для решения этой проблемы — это ответвление дочернего контекста. Но к сожалению, это почему-то используется редко.
     """
-                ],
+                ,
                 questions: [
                     Question(
                         title: "Какой класс нужно использовать для создания хранилища указанного типа на основе модели?",
@@ -63,8 +64,8 @@ extension DataStore {
             
             Secret(
                 title: "Delegate",
-                image: ["Delegate"],
-                matherials: [
+                image: "Delegate",
+                matherial:
     """
     Паттерн - шаблон который используется для реализации конкретных действий
     
@@ -91,7 +92,7 @@ extension DataStore {
     Пример:
     FirstScreenViewController: SecondViewControllerDelegate - подчинённый реализует только те требования, которые диктует ему (передаёт на исполнение) SecondViewController через протокол SecondViewControllerDelegate, который как правило описан в файле вместе с руководящим классом SecondViewController.
     """
-                ],
+                ,
                 questions: [
                     Question(
                         title: "Определите объект-делегат, если FirstScreenViewController: SecondViewControllerDelegate",

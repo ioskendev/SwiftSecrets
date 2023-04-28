@@ -13,12 +13,12 @@ final class MatherialsViewController: UIViewController {
     @IBOutlet var matherialLabel: UILabel!
     
     var secret: Secret!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        matherialImage.image = UIImage(named: secret.image[0])
-        matherialLabel.text = secret.matherials[0]
+        
+        matherialImage.image = UIImage(named: secret.image)
+        matherialLabel.text = secret.matherial
     }
-
+    
 }

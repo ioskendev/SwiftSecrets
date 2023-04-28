@@ -43,8 +43,7 @@ final class DevelopersCollectionViewController: UICollectionViewController {
 extension DevelopersCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        return CGSize(width: itemSize, height: itemSize)
+        CGSize(width: itemSize, height: itemSize)
     }
     
 }

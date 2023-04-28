@@ -12,25 +12,26 @@ final class SwiftSecretsTableViewController: UITableViewController {
     private var secrets = DataStore.share.getSecrets()
     private var index: Int!
     
+    // MARK: - Life cycles methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         secrets.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secret", for: indexPath)
         let secret = secrets[indexPath.row]
         
         cell.configure(with: secret)
-
+        
         return cell
     }
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -44,7 +45,7 @@ final class SwiftSecretsTableViewController: UITableViewController {
         }
     }
     
-    
+    // MARK: - IBActions
     @IBAction func sortingSecrets(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             secrets = secrets.sorted { $0.title < $1.title }

@@ -9,8 +9,10 @@ import Foundation
 
 struct Secret {
     let title: String
-    let image: [String]
-    let matherials: [String]
+    
+    let image: String
+    let matherial: String
+    
     let questions: [Question]
     var result = 0
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DevelopersHeaderCollectionReusableView: UICollectionReusableView {
+final class DevelopersHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var developersCollectionHeaderLabel: UILabel!
     

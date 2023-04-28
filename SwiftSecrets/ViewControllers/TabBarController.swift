@@ -10,13 +10,12 @@ import UIKit
 final class TabBarController: UITabBarController {
     
     var secret: Secret!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
     }
     
-
     private func setupViewControllers() {
         title = secret.title
         
@@ -27,5 +26,5 @@ final class TabBarController: UITabBarController {
             questionsVC.secret = secret
         }
     }
-
+    
 }
