@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct Secret {
+    let title: String
+    
+    let image: String
+    let matherial: String
+    
+    let questions: [Question]
+    var result = 0
+}
+
+struct Question {
+    let title: String
+    let answers: [String]
+    let best: Int
+}

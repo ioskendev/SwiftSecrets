@@ -7,23 +7,18 @@
 
 import UIKit
 
-class MatherialsViewController: UIViewController {
-
+final class MatherialsViewController: UIViewController {
+    
+    @IBOutlet var matherialImage: UIImageView!
+    @IBOutlet var matherialLabel: UILabel!
+    
+    var secret: Secret!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        matherialImage.image = UIImage(named: secret.image)
+        matherialLabel.text = secret.matherial
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
