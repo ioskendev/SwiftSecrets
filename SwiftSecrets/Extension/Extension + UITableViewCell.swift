@@ -13,7 +13,7 @@ extension UITableViewCell {
         var content = defaultContentConfiguration()
         content.text = secret.title
         
-        if secret.result == 3 {
+        if secret.result == secret.questions.count {
             content.secondaryText = nil
             accessoryType = .checkmark
         } else {
