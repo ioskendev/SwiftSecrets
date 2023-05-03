@@ -61,12 +61,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D6DEB0629F6F85F0043ED6B /* Extension */ = {
+		4D6DEB0629F6F85F0043ED6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4D6DEB0729F6F8AA0043ED6B /* Extension + UITableViewCell.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C3BFD99829E70B1200EEA048 = {
@@ -90,7 +90,7 @@
 			children = (
 				C3BFD9B929E70E0400EEA048 /* Storyboards */,
 				C3BFD9BA29E70E1E00EEA048 /* ViewControllers */,
-				4D6DEB0629F6F85F0043ED6B /* Extension */,
+				4D6DEB0629F6F85F0043ED6B /* Extensions */,
 				C3BFD9BE29E70F5100EEA048 /* Models */,
 				C3BFD9B829E70D8D00EEA048 /* App */,
 				C3BFD9BB29E70E3900EEA048 /* Resources */,
