@@ -13,3 +13,13 @@ final class DevelopersCell: UICollectionViewCell {
     @IBOutlet weak var developerLabel: UILabel!
     
 }
+
+extension DevelopersCell {
+    
+    func configure(with developer: String) {
+        developerImageView.image = UIImage(named: developer)
+        developerLabel.text = developer
+        developerImageView.layer.cornerRadius = 10
+    }
+    
+}

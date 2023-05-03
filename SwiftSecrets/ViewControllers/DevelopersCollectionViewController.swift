@@ -7,7 +7,12 @@
 
 import UIKit
 
-private let reuseIdentifier = "developerContent"
+enum IDSpace{
+    
+    static let cellReuseIdentifier = "developerContent"
+    static let sectionHeaderReuseIdentifier = "DevelopersHeaderCollectionReusableView"
+    
+}
 
 final class DevelopersCollectionViewController: UICollectionViewController {
     
@@ -23,13 +28,13 @@ final class DevelopersCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: reuseIdentifier,
+            withReuseIdentifier: IDSpace.cellReuseIdentifier,
             for: indexPath
         ) as! DevelopersCell
         
-        cell.developerImageView.image = UIImage(named: developers[indexPath.row])
-        cell.developerLabel.text = developers[indexPath.row]
-        cell.developerImageView.layer.cornerRadius = itemSize / 10
+        let developer = developers[indexPath.row]
+        
+        cell.configure(with: developer)
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = .zero
@@ -53,7 +58,7 @@ extension DevelopersCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if let sectionHeader = collectionView.dequeueReusableSupplementaryView(
             ofKind: kind,
-            withReuseIdentifier: "DevelopersHeaderCollectionReusableView",
+            withReuseIdentifier: IDSpace.sectionHeaderReuseIdentifier,
             for: indexPath
         ) as? DevelopersHeaderCollectionReusableView{
             sectionHeader.developersCollectionHeaderLabel.text = "ioskendev team"

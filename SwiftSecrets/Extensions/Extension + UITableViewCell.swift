@@ -9,7 +9,7 @@ import UIKit
 
 extension UITableViewCell {
     
-    func configure( with secret: Secret) {
+    func configure(with secret: Secret) {
         var content = defaultContentConfiguration()
         content.text = secret.title
         
